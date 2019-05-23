@@ -45,6 +45,7 @@ app.use(busboy()); // to support file uploads
 app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/public/css'));
 app.use(express.static(__dirname + '/public/js'));
+app.use(express.static(__dirname + '/public/img'));
 app.use(express.static(__dirname + '/config'));
 
 app.set('views', __dirname + '/views');

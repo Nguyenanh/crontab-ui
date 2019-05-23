@@ -1,6 +1,6 @@
 <!doctype html>
 <head>
-<title>Crontab UI</title>
+<title>Imstream Schedule</title>
 <script src="<%= url %>/jquery.js"></script>
 <script src="<%= url %>/script.js"></script>
 <script src="<%= url %>/bootstrap.min.js"></script>
@@ -24,8 +24,16 @@
 </head>
 <body>
 <%# include navbar %>
+<header class="page-header">
+	<div class="container">
+		<a href="/" class="logo">
+			<img src="<%= url %>/logo.png"
+		</a>
+	</div>
+</header>
+</br>
 <div class="container">
-	<h2>Imstream Schedule</h2>
+	
 	<!-- <div class="form-group">
 		<label for="env_vars">Environment Variables:</label>
 		<textarea class="form-control" rows="3" id="env_vars" placeholder="# Please set PATH, MAILTO, HOME... here"></textarea>
