@@ -63,7 +63,7 @@ app.get(routes.root, function(req, res) {
 	// send all the required parameters
 	crontab.crontabs( function(docs){
 		res.render('index', {
-      url: "http://"+app.get('host')+":"+app.get('port'),
+      url: "http://"+process.env.HOST_ASSETS+":"+app.get('port'),
 			routes : JSON.stringify(routes),
 			crontabs : JSON.stringify(docs),
 			backups : crontab.get_backup_names(),
