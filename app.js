@@ -5,12 +5,12 @@ var crontab = require("./crontab");
 var restore = require("./restore");
 var moment = require('moment');
 var basicAuth = require('express-basic-auth');
-
+var cors = require('cors');
 var path = require('path');
 var mime = require('mime-types');
 var fs = require('fs');
 var busboy = require('connect-busboy'); // for file upload
-
+app.use(cors());
 // basic auth
 var BASIC_AUTH_USER = process.env.BASIC_AUTH_USER;
 var BASIC_AUTH_PWD = process.env.BASIC_AUTH_PWD;
@@ -46,6 +46,7 @@ app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/public/css'));
 app.use(express.static(__dirname + '/public/js'));
 app.use(express.static(__dirname + '/config'));
+
 app.set('views', __dirname + '/views');
 
 // set host to 127.0.0.1 or the value set by environment var HOST
@@ -61,6 +62,7 @@ app.get(routes.root, function(req, res) {
 	// send all the required parameters
 	crontab.crontabs( function(docs){
 		res.render('index', {
+      url: "http://"+app.get('host')+":"+app.get('port'),
 			routes : JSON.stringify(routes),
 			crontabs : JSON.stringify(docs),
 			backups : crontab.get_backup_names(),

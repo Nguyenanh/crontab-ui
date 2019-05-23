@@ -1,12 +1,14 @@
 <!doctype html>
 <head>
 <title>Crontab UI</title>
-<script src="jquery.js"></script>
-<script src="script.js"></script>
-<script src="bootstrap.min.js"></script>
-<script src="mailconfig.js"></script>
+<script src="<%= url %>/jquery.js"></script>
+<script src="<%= url %>/script.js"></script>
+<script src="<%= url %>/bootstrap.min.js"></script>
+<script src="<%= url %>/mailconfig.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/v/bs/dt-1.10.12/datatables.min.js"></script>
-<link rel="stylesheet" href="bootstrap.min.css" />
+<link rel="stylesheet" href="<%= url %>/bootstrap.min.css" />
+<link rel="stylesheet" href="<%= url %>/bootstrap_override.css" type="text/css"/>
+<link rel="stylesheet" href="<%= url %>/styles.css" type="text/css"/>
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css"/>
 <script type="text/javascript">
 	var crontabs = [];
@@ -21,23 +23,23 @@
 </script>
 </head>
 <body>
-<% include navbar %>
+<%# include navbar %>
 <div class="container">
-	<h2>Cronjobs</h2>
-	<div class="form-group">
+	<h2>Imstream Schedule</h2>
+	<!-- <div class="form-group">
 		<label for="env_vars">Environment Variables:</label>
 		<textarea class="form-control" rows="3" id="env_vars" placeholder="# Please set PATH, MAILTO, HOME... here"></textarea>
-	</div>
+	</div> -->
 	<a class="btn btn-primary" onclick="newJob();"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> New</a>
-	<a class="btn btn-info" onclick="doBackup();"><span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span> Backup</a>
-	<form id="import_form" enctype="multipart/form-data" action="<%= JSON.parse(routes).import %>" method="post" style="display:none">
+	<!-- <a class="btn btn-info" onclick="doBackup();"><span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span> Backup</a> -->
+	<!-- <form id="import_form" enctype="multipart/form-data" action="<%= JSON.parse(routes).import %>" method="post" style="display:none">
 		<input type="file" id="import_file" name="import_file" onchange="$('#import_form').submit()"/>
-	</form>
-	<a class="btn btn-warning" onclick="import_db()"><span class="glyphicon glyphicon-import" aria-hidden="true"></span> Import</a>
-	<a class="btn btn-warning" href="<%= JSON.parse(routes).export %>"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Export</a>
+	</form> -->
+	<!-- <a class="btn btn-warning" onclick="import_db()"><span class="glyphicon glyphicon-import" aria-hidden="true"></span> Import</a> -->
+	<!-- <a class="btn btn-warning" href="<%= JSON.parse(routes).export %>"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Export</a> -->
 	<!--<a class="btn btn-info" onclick="import_crontab()"><span class="glyphicon glyphicon-import" aria-hidden="true"></span> Import from crontab</a>-->
-	<a class="btn btn-success" onclick="getCrontab();"><span class="glyphicon glyphicon-open" aria-hidden="true"></span> Get from crontab</a>
-	<a class="btn btn-success" onclick="setCrontab();"><span class="glyphicon glyphicon-save" aria-hidden="true"></span> Save to crontab</a>
+	<!-- <a class="btn btn-success" onclick="getCrontab();"><span class="glyphicon glyphicon-open" aria-hidden="true"></span> Get from crontab</a> -->
+	<!-- <a class="btn btn-success" onclick="setCrontab();"><span class="glyphicon glyphicon-save" aria-hidden="true"></span> Save to crontab</a> -->
 	<br/>
 	<br/>
 

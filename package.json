@@ -9,6 +9,7 @@
   "dependencies": {
     "body-parser": "latest",
     "connect-busboy": "latest",
+    "cors": "^2.8.5",
     "cron-parser": "latest",
     "ejs": "latest",
     "express": "latest",

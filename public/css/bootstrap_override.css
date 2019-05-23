@@ -1,0 +1,36 @@
+.thumbnail a>img, .thumbnail>img {
+  height: 100px;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+  vertical-align: middle;
+}
+.pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus {
+  z-index: 3;
+  color: #fff;
+  background-color: #8e2efb;
+  border-color: #8e2efb;
+  cursor: default;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #8e2efb;
+  border-color: #8015fb;
+}
+.btn-primary:hover, .btn-primary:active {
+  color: #fff;
+  background-color: #7305f1;
+  border-color: #6304ce;
+}
+.btn-primary:active:focus, .btn-primary:active:hover {
+  color: #fff;
+  background-color: #7305f1;
+  border-color: #6304ce;
+}
+.btn-primary:hover, .btn-primary:focus {
+  color: #fff;
+  background-color: #7305f1;
+  border-color: #6304ce;
+}
+.btn.focus, .btn:focus, .btn:hover {
+  color: #fff;
+}
