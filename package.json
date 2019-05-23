@@ -1,10 +1,10 @@
 {
-  "name": "crontab-ui",
+  "name": "crontab-im",
   "version": "0.3.7",
   "description": "Easy and safe way to manage your crontab file",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
   },
   "dependencies": {
     "body-parser": "latest",
